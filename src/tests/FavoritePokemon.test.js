@@ -11,7 +11,7 @@ describe('Testa o componente <FavoritePokemon.js', () => {
     const noFavorite = screen.getByText(/no favorite pokémon found/i);
     expect(noFavorite).toBeInTheDocument();
   });
-  it('Testa se apenas são exibidos os Pokémon favoritados.', async () => {
+  it('Testa se apenas são exibidos os Pokémon favoritados.', () => {
     renderWithRouter(<App />);
     const pokemon = screen.getByRole('link', { name: /more details/i });
     userEvent.click(pokemon);
